@@ -29,7 +29,7 @@ namespace EmotionDetect
 
         public void ToDetectParallel(string textToDetect)
         {
-            var api_key = "ljqseaobFwtxXAX2dzP1NYgnmBxAKDMYdmG9i4SpbU4";
+            var api_key = "---api key---";
             paralleldots pd = new paralleldots(api_key);
 
             string responseString = pd.emotion(textToDetect);
@@ -51,7 +51,7 @@ namespace EmotionDetect
             var client = new RestClient("https://api.promptapi.com/text_to_emotion");
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
-            request.AddHeader("apikey", "xEXuALZQmV51n55lOsiAmg47kAKvE24k");
+            request.AddHeader("apikey", "---api key---");
             request.AddParameter("text/plain", textToDetect, ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
             string responseString = response.Content;
@@ -68,7 +68,7 @@ namespace EmotionDetect
 
         public void ToDetectIBM(string textToDetect)
         {
-            IamAuthenticator authenticator = new IamAuthenticator(apikey: "tf-4WTg49n_CIAPm38mFrbOxZND6VVwXeo-fP53vjKpX");
+            IamAuthenticator authenticator = new IamAuthenticator(apikey: "---api key---");
             NaturalLanguageUnderstandingService naturalLanguageUnderstanding = new NaturalLanguageUnderstandingService("2020-08-01", authenticator);
             naturalLanguageUnderstanding.SetServiceUrl("https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/3777d0c9-6aad-4112-adc9-20fbc116ffaf");
 
